@@ -1,0 +1,6 @@
+%h1 トップページ
+
+- if logged_in?
+  = link_to 'ログアウト', logout_path
+- else
+  = link_to 'Twitterでログイン', '/auth/twitter'

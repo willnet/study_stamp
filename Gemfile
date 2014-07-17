@@ -14,6 +14,7 @@ gem 'spring',        group: :development
 gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
+gem 'dotenv-rails'
 
 group :development do
   gem 'quiet_assets'

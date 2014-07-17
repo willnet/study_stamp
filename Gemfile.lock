@@ -31,6 +31,7 @@ GEM
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    awesome_print (1.2.0)
     better_errors (1.1.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -51,6 +52,11 @@ GEM
     columnize (0.8.9)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
+    dotenv (0.11.1)
+      dotenv-deployment (~> 0.0.2)
+    dotenv-deployment (0.0.2)
+    dotenv-rails (0.11.1)
+      dotenv (= 0.11.1)
     erubis (2.7.0)
     execjs (2.2.1)
     haml (4.0.5)
@@ -163,9 +169,11 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  awesome_print
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)
+  dotenv-rails
   haml-rails
   jbuilder (~> 2.0)
   jquery-rails
