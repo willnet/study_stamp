@@ -31,3 +31,13 @@ group :development do
   gem 'awesome_print'
   gem 'sqlite3', group: :test
 end
+
+group :test do
+  gem 'rspec-rails', group: :development
+  gem 'factory_girl_rails', group: :development
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_rewinder'
+  gem 'launchy'
+end
