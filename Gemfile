@@ -14,6 +14,7 @@ gem 'haml-rails'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'dotenv-rails'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'pg'
