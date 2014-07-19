@@ -16,17 +16,31 @@
     %li#tabStamp Stamp
     %li#tabTutorial
       %a.link1{:href => "#"} Tutorial
-  %ul#stampArea.clearfix
+  %ul#tabList2.clearfix{style: 'display:none'}
+    %li#tabStamp2
+      %a.link1{:href => "#"} Stamp
+    %li#tabTutorial2 Tutorial
+
+  #js-stampArea
+    %ul#stampArea.clearfix
+      - @tutorials.each do |tutorial|
+        %li
+          - if tutorial.stamped_by?(current_user)
+            = link_to assignment_stamp_path(assignment_id: @assignment.id, stamp_id: tutorial.stamps.where(user: current_user).first.id), remote: true, method: :delete, class: 'js-stamp' do
+              %span
+                = image_tag 'goodjob.png'
+              = image_tag "#{tutorial.number}.gif", alt: tutorial.number
+          - else
+            = link_to assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: tutorial.id), remote: true, method: :post, class: 'js-unstamp' do
+              = image_tag "#{tutorial.number}.gif", alt: tutorial.number
+  #js-tutorialArea{style: 'display:none'}
     - @tutorials.each do |tutorial|
-      %li
-        - if tutorial.stamped_by?(current_user)
-          = link_to assignment_stamp_path(assignment_id: @assignment.id, stamp_id: tutorial.stamps.where(user: current_user).first.id), remote: true, method: :delete, class: 'js-stamp' do
-            %span
-              = image_tag 'goodjob.png'
-            = image_tag "#{tutorial.number}.gif", alt: tutorial.number
-        - else
-          = link_to assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: tutorial.id), remote: true, method: :post, class: 'js-unstamp' do
-            = image_tag "#{tutorial.number}.gif", alt: tutorial.number
+      %div{class: tutorial.number == @tutorials.last ? 'tutorialAreaEnd' : 'tutorialArea' }
+        %h3
+          %a.link1{:href => "#"}
+            = image_tag "num_#{tutorial.number}.gif"
+            = tutorial.title
+
   %div
     = image_tag 'part_9.gif'
 = render 'footer2'

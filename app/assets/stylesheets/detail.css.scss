@@ -13,7 +13,7 @@ body{
 	text-align: center;
 	background: #ffffff;
 	color: #000000;
-	font-family: "Hiragino Maru Gothic Pro W4", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+	font-family: "HiraKakuProN-W6", "Hiragino Maru Gothic Pro W4", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -259,6 +259,13 @@ div.clear{
 	background: no-repeat left top image_url("part_6.gif");
 }
 
+#tabList2 {
+	margin-left: 30px;
+	list-style: none;
+	height: 62px;
+	background: no-repeat left top image_url("part_7.gif");
+}
+
 #tabStamp {
 	float: left;
 	margin-left: 26px;
@@ -271,11 +278,30 @@ div.clear{
 
 #tabTutorial {
 	float: left;
+	width: 278px;
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	padding-top: 24px;
+}
+
+#tabStamp2 {
+	float: left;
+	margin-left: 26px;
 	width: 258px;
 	text-align: center;
 	font-size: 24px;
 	font-family: 'Georgia-BoldItalic',Georgia;
 	padding-top: 24px;
+}
+
+#tabTutorial2 {
+	float: left;
+	width: 278px;
+	text-align: center;
+	font-size: 32px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	padding-top: 28px;
 }
 
 #stampArea {
@@ -293,4 +319,67 @@ div.clear{
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+
+.tutorialArea {
+	text-align: left;
+	margin-left: 30px;
+	padding: 20px 0px;
+	background: no-repeat left bottom image_url("part_10.gif");
+}
+
+.tutorialAreaEnd {
+	text-align: left;
+	margin-left: 30px;
+	padding: 20px 0px;
+}
+
+.tutorialArea h3,
+.tutorialAreaEnd h3 {
+	font-size: 32px;
+}
+
+.tutorialArea h3 img,
+.tutorialAreaEnd h3 img {
+	vertical-align: middle;
+	margin-right: 10px;
+	margin-top: 0;
+}
+
+.tutorialComment {
+	margin: 0px 30px 0px 96px;
+	text-align: left;
+}
+
+.tutorialComment p {
+	font-size: 32px;
+	line-height: 1.4;
+	color: #777777;
+	margin-bottom: 1em;
+}
+
+.tutorialComment ul {
+	margin-bottom: 1em;
+	margin-left: 2em;
+}
+
+.tutorialComment ul li {
+	font-size: 32px;
+	line-height: 1.4;
+	color: #777777;
+}
+
+#tutorialBackButton {
+	margin-top: 30px;
+	width: 188px;
+	height: 56px;
+	text-align: center;
+	background: no-repeat left top image_url("part_11.gif");
+}
+
+#tutorialBackButton a {
+	font-size: 24px;
+	color: #ffffff;
+	margin-right: 8px;
+	font-family: 'Georgia-BoldItalic',Georgia;
 }
