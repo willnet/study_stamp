@@ -1,26 +1,32 @@
-= link_to '課題一覧', assignments_path
-
-%h1= @assignment.title
-%p= @assignment.description
-
-- if logged_in?
-  - @tutorials.each do |tutorial|
-    %ul
-      %li
-        = tutorial.number
-        - if tutorial.stamped_by?(current_user)
-          %span.js-unstamp
-            = link_to 'ハンコ済み', assignment_stamp_path(assignment_id: @assignment, stamp_id: tutorial.stamps.where(user: current_user).first.id), remote: true, method: :delete
-        - else
-          %span.js-stamp
-            = link_to 'ハンコを押す', assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: tutorial.id), remote: true, method: :post
-  - @tutorials.each do |tutorial|
-    %ul
-      %li
-        = tutorial.title
-
-- else
-  %ul
+%section#header
+  #userImage
+    %p
+      - if logged_in?
+        = image_tag current_user.image_url, width: 50, height: 50
+  %h1#Logo
+    = image_tag 'stamppp_2.gif', alt: 'StamPPP'
+  #mainNav
+    %a{:href => "#"}
+      = image_tag 'part_2.gif'
+%section.wrapper
+  %h2#pageTitle
+    = @assignment.title
+    %span Stamp
+  %ul#tabList.clearfix
+    %li#tabStamp Stamp
+    %li#tabTutorial
+      %a.link1{:href => "#"} Tutorial
+  %ul#stampArea.clearfix
     - @tutorials.each do |tutorial|
       %li
-        = tutorial.title
+        - if tutorial.stamped_by?(current_user)
+          = link_to assignment_stamp_path(assignment_id: @assignment.id, stamp_id: tutorial.stamps.where(user: current_user).first.id), remote: true, method: :delete, class: 'js-stamp' do
+            %span
+              = image_tag 'goodjob.png'
+            = image_tag "#{tutorial.number}.gif", alt: tutorial.number
+        - else
+          = link_to assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: tutorial.id), remote: true, method: :post, class: 'js-unstamp' do
+            = image_tag "#{tutorial.number}.gif", alt: tutorial.number
+  %div
+    = image_tag 'part_9.gif'
+= render 'footer2'

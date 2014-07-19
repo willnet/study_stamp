@@ -1,0 +1,4 @@
+= link_to assignment_stamp_path(id: @assignment, stamp_id: @stamp), remote: true, method: :delete, class: 'js-unstamp' do
+  %span
+    = image_tag 'goodjob.png'
+  = image_tag "#{@stamp.tutorial.number}.gif", alt: @stamp.tutorial.number

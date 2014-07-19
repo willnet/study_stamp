@@ -1,0 +1,2 @@
+= link_to assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: @tutorial.id), remote: true, method: :post, class: 'js-stamp' do
+  = image_tag "#{@tutorial.number}.gif", alt: @tutorial.number

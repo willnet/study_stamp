@@ -38,6 +38,7 @@ article, aside, dialog, figure, footer, header, hgroup, menu, nav, address, sect
 
 img {
 	border: none;
+	vertical-align: top;
 }
 
 hr{
@@ -116,18 +117,18 @@ div.clear{
 	margin: 0px auto;
 	width: 374px;
 	height: 104px;
-	background: no-repeat left top image_url('home_1.gif');
+	background: no-repeat left top image_url("home_1.gif");
 }
 
 #homeLogin p {
 	margin-top: 10px;
 	color: #ffffff;
 	font-size: 28px;
-	padding-top: 28px;
+	padding-top: 34px;
 }
 
 #homeLogin p img {
-	margin-right: 8px;
+	margin: -8px 8px 0px 0px;
 }
 
 #homeLogin p a {
@@ -149,7 +150,7 @@ div.clear{
 }
 
 .footer2 {
-	margin-top: 60px;
+	margin-top: 50px;
 }
 
 .fotterLink {
@@ -180,7 +181,7 @@ div.clear{
 	top: 30px;
 	width: 68px;
 	height: 68px;
-	background: no-repeat left top image_url('part_1.gif');
+	background: no-repeat left top image_url("part_1.gif");
 }
 
 #userImage p {
@@ -210,7 +211,18 @@ div.clear{
 	font-family: 'Georgia-BoldItalic',Georgia;
 }
 
-#pageTitle span {
+#footerCopy {
+	margin: 0px auto 40px auto;
+	font-size: 54px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+}
+
+#footerCopy div {
+	margin-top: 14px;
+}
+
+#pageTitle span,
+#footerCopy span {
 	font-family: 'Georgia-Italic',Georgia;
 }
 
@@ -219,9 +231,8 @@ div.clear{
 	height: 100px;
 	margin: 0px 28px 28px 30px;
 	font-size: 32px;
-	color: #000000;
 	font-family: 'Georgia-BoldItalic',Georgia;
-	background: no-repeat left top image_url('part_3.gif');
+	background: no-repeat left top image_url("part_3.gif");
 	float: left;
 }
 
@@ -230,9 +241,8 @@ div.clear{
 	height: 100px;
 	margin: 0px 0px 28px 0px;
 	font-size: 32px;
-	color: #000000;
 	font-family: 'Georgia-BoldItalic',Georgia;
-	background: no-repeat left top image_url('part_3.gif');
+	background: no-repeat left top image_url("part_3.gif");
 	float: left;
 }
 
@@ -240,4 +250,47 @@ div.clear{
 .indexList2 a {
 	display: block;
 	margin: 36px 10px 0px 0px;
+}
+
+#tabList {
+	margin-left: 30px;
+	list-style: none;
+	height: 62px;
+	background: no-repeat left top image_url("part_6.gif");
+}
+
+#tabStamp {
+	float: left;
+	margin-left: 26px;
+	width: 258px;
+	text-align: center;
+	font-size: 32px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	padding-top: 28px;
+}
+
+#tabTutorial {
+	float: left;
+	width: 258px;
+	text-align: center;
+	font-size: 24px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	padding-top: 24px;
+}
+
+#stampArea {
+	list-style: none;
+	margin: 20px 0px 0px 30px;
+}
+
+#stampArea li {
+	float: left;
+	position: relative;
+	margin: 0px 20px 20px 0px;
+}
+
+#stampArea li span {
+	position: absolute;
+	left: 0;
+	top: 0;
 }
