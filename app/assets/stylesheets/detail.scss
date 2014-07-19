@@ -116,7 +116,7 @@ div.clear{
 	margin: 0px auto;
 	width: 374px;
 	height: 104px;
-	background: no-repeat left top url("../image/home_1.gif");
+	background: no-repeat left top image_url('home_1.gif');
 }
 
 #homeLogin p {
@@ -152,7 +152,7 @@ div.clear{
 	margin-top: 60px;
 }
 
-.fotterLink {	
+.fotterLink {
 	font-size: 24px;
 	font-family: 'Georgia-BoldItalic',Georgia;
 }
@@ -180,7 +180,7 @@ div.clear{
 	top: 30px;
 	width: 68px;
 	height: 68px;
-	background: no-repeat left top url("../image/part_1.gif");
+	background: no-repeat left top image_url('part_1.gif');
 }
 
 #userImage p {
@@ -221,7 +221,7 @@ div.clear{
 	font-size: 32px;
 	color: #000000;
 	font-family: 'Georgia-BoldItalic',Georgia;
-	background: no-repeat left top url("../image/part_3.gif");
+	background: no-repeat left top image_url('part_3.gif');
 	float: left;
 }
 
@@ -232,7 +232,7 @@ div.clear{
 	font-size: 32px;
 	color: #000000;
 	font-family: 'Georgia-BoldItalic',Georgia;
-	background: no-repeat left top url("../image/part_3.gif");
+	background: no-repeat left top image_url('part_3.gif');
 	float: left;
 }
 
@@ -241,8 +241,3 @@ div.clear{
 	display: block;
 	margin: 36px 10px 0px 0px;
 }
-
-
-
-
-
