@@ -16,7 +16,7 @@ namespace :dev do
         rails.tutorials.create!(title: 'Railsの開発環境を整える', description: '頑張りましょう', number: 1)
         rails.tutorials.create!(title: 'heroku にデプロイしてみる', description: '頑張りましょう', number: 2)
         rails.tutorials.create!(title: 'Railsチュートリアルを読む', description: '頑張りましょう', number: 3)
-        rails.tutorials.create!(title: 'パーフェクト Ruby on Rails を読む', description: '頑張りましょう', number: 4)
+        rails.tutorials.create!(title: 'パーフェクト Ruby on Rails', description: '頑張りましょう', number: 4)
         rails.tutorials.create!(title: 'ginza.rb に参加する', description: '頑張りましょう', number: 5)
         rails.tutorials.create!(title: 'Regional Rubykaigi に参加する', description: '頑張りましょう', number: 6)
         rails.tutorials.create!(title: 'Regional Rubykaigi に登壇する', description: '頑張りましょう', number: 7)
