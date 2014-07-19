@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140719020604) do
+ActiveRecord::Schema.define(version: 20140719021818) do
 
   create_table "assignments", force: true do |t|
     t.string   "title"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140719020604) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "number"
   end
 
   add_index "tutorials", ["assignment_id"], name: "index_tutorials_on_assignment_id"
