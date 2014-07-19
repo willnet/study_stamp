@@ -1,0 +1,248 @@
+@charset "UTF-8";
+
+
+*,html{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	line-height: 100%;
+	text-align: center;
+	background: #ffffff;
+	color: #000000;
+	font-family: "Hiragino Maru Gothic Pro W4", "Hiragino Maru Gothic Pro", "ヒラギノ丸ゴ Pro W4", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-size: 1em;
+	line-height: 100%;
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+}
+
+article, aside, dialog, figure, footer, header, hgroup, menu, nav, address, section { display: block; }
+
+::-moz-selection{
+	background: #000000;
+	color: #ffffff;
+}
+
+::selection{
+	background: #000000;
+	color: #ffffff;
+}
+
+img {
+	border: none;
+}
+
+hr{
+	display: none;
+}
+
+div.clear{
+	clear: both;
+	height: 1px;
+}
+
+/* new clearfix */
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
+
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+.mb100 {
+	margin-bottom: 100px;
+}
+
+.wrapper {
+	width: 640px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#header {
+	width: 640px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	height: 140px;
+}
+
+#indexLogo {
+	height: 134px;
+	margin: 150px auto 20px auto;
+}
+
+.txt1 {
+	font-size: 34px;
+	line-height: 1.4;
+	color: #777777;
+}
+
+.txt2 {
+	font-size: 28px;
+	line-height: 1.4;
+	color: #777777;
+}
+
+.link1:link {
+	color: #000000;
+	text-decoration: none;
+}
+
+.link1:visited {
+	color: #000000;
+	text-decoration: none;
+}
+
+.link1:hover,
+.link1:focus {
+	text-decoration: underline;
+}
+
+#homeLogin {
+	margin: 0px auto;
+	width: 374px;
+	height: 104px;
+	background: no-repeat left top url("../image/home_1.gif");
+}
+
+#homeLogin p {
+	margin-top: 10px;
+	color: #ffffff;
+	font-size: 28px;
+	padding-top: 28px;
+}
+
+#homeLogin p img {
+	margin-right: 8px;
+}
+
+#homeLogin p a {
+	margin-right: 12px;
+}
+
+.link2:link {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.link2:visited {
+	color: #ffffff;
+	text-decoration: none;
+}
+
+.footer {
+	margin-top: 100px;
+}
+
+.footer2 {
+	margin-top: 60px;
+}
+
+.fotterLink {	
+	font-size: 24px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+}
+
+.copyright {
+	margin-top: 24px;
+	font-size: 24px;
+	color: #cccccc;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	padding-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+#userImage {
+	position: absolute;
+	left: 30px;
+	top: 30px;
+	width: 68px;
+	height: 68px;
+	background: no-repeat left top url("../image/part_1.gif");
+}
+
+#userImage p {
+	text-align: left;
+	padding: 6px 0px 0px 6px;
+}
+
+#Logo {
+	position: absolute;
+	left: 225px;
+	top: 30px;
+	width: 188px;
+	height: 68px;
+}
+
+#mainNav {
+	position: absolute;
+	right: 30px;
+	top: 30px;
+	width: 60px;
+	height: 48px;
+}
+
+#pageTitle {
+	margin: 10px auto 60px auto;
+	font-size: 54px;
+	font-family: 'Georgia-BoldItalic',Georgia;
+}
+
+#pageTitle span {
+	font-family: 'Georgia-Italic',Georgia;
+}
+
+.indexList {
+	width: 276px;
+	height: 100px;
+	margin: 0px 28px 28px 30px;
+	font-size: 32px;
+	color: #000000;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	background: no-repeat left top url("../image/part_3.gif");
+	float: left;
+}
+
+.indexList2 {
+	width: 276px;
+	height: 100px;
+	margin: 0px 0px 28px 0px;
+	font-size: 32px;
+	color: #000000;
+	font-family: 'Georgia-BoldItalic',Georgia;
+	background: no-repeat left top url("../image/part_3.gif");
+	float: left;
+}
+
+.indexList a,
+.indexList2 a {
+	display: block;
+	margin: 36px 10px 0px 0px;
+}
+
+
+
+
+
