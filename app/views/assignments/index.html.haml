@@ -1,5 +1,18 @@
-%h1 課題一覧
-%ul
-  - @assignments.each do |assignment|
-    %li
-      = link_to assignment.title, assignment
+%section#header
+  #userImage
+    %p
+      - if logged_in?
+        = image_tag current_user.image_url, width: 50, height: 50
+  %h1#Logo
+    = image_tag 'stamppp_2.gif', alt: 'StamPPP'
+  #mainNav
+    %a{:href => "#"}
+      = image_tag 'part_2.gif'
+%section.wrapper
+  %h2#pageTitle
+    %span Select
+    Task
+  .clearfix
+    - @assignments.each do |assignment|
+      %p{ class: cycle(%w(indexList indexList2)) }
+        = link_to assignment.title, assignment, class: 'link1'

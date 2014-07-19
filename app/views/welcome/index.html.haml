@@ -1,32 +1,15 @@
-!!!
-%html{:lang => "ja"}
-  %head
-    %meta{:charset => "UTF-8"}/
-    %meta{:content => "width=640,user-scalable=no", :name => "viewport"}/
-    %title StamPPP
-    /[if lt IE 9]
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
-  %body
-    %section.wrapper
-      %h1#indexLogo
-        = image_tag 'stamppp_1.gif', alt: 'StamPPP'
-      %p.txt1.mb100
-        学習を楽しもう。
-        %br>/
-        課題を終わらせてスタンプを。
-      %p.txt2
-        %a.link1{:href => "#"}> 利用規約
-        に同意して
-      #homeLogin
-        %p
-          = link_to '/auth/twitter' do
-            = image_tag "home_2.gif"
-            Twitterでログイン
-    %section.footer
-      %p.fotterLink
-        = link_to 'Home', root_path
-        \/
-        %a.link1{:href => "./about/"} About
-        \/
-        %a.link1{:href => "./contact/"} Contact
-      %p.copyright StamPPP ©2014 All rights reserved.
+%section.wrapper
+  %h1#indexLogo
+    = image_tag 'stamppp_1.gif', alt: 'StamPPP'
+  %p.txt1.mb100
+    学習を楽しもう。
+    %br>/
+    課題を終わらせてスタンプを。
+  %p.txt2
+    %a.link1{:href => "#"}> 利用規約
+    に同意して
+  #homeLogin
+    %p
+      = link_to '/auth/twitter' do
+        = image_tag "home_2.gif"
+        Twitterでログイン
