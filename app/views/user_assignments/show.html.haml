@@ -6,7 +6,7 @@
   %ul
     %li
       = tutorial.number
-      - if tutorial.stamped_by?(current_user)
+      - if tutorial.stamped_by?(@user)
         ハンコ済み
 - @tutorials.each do |tutorial|
   %ul
