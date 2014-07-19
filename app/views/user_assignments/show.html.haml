@@ -1,0 +1,14 @@
+%h1= @assignment.title
+%p= @assignment.description
+
+
+- @tutorials.each do |tutorial|
+  %ul
+    %li
+      = tutorial.number
+      - if tutorial.stamped_by?(current_user)
+        ハンコ済み
+- @tutorials.each do |tutorial|
+  %ul
+    %li
+      = tutorial.title

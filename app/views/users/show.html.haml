@@ -1,0 +1,4 @@
+%h1= "#{@user.nickname} さんの取り組んでいる課題"
+
+- @user.assignments.each do |assignment|
+  = link_to assignment.title, user_assignment_path(user_id: @user.nickname, id: assignment.id)
