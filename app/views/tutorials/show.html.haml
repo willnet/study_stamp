@@ -1,0 +1,36 @@
+%section#header
+  #userImage
+    %p
+      - if logged_in?
+        = image_tag current_user.image_url, width: 50, height: 50
+  %h1#Logo
+    = image_tag 'stamppp_2.gif', alt: 'StamPPP'
+  #mainNav
+    %a{:href => "#"}
+      = image_tag 'part_2.gif'
+%section.wrapper
+  %h2#pageTitle
+    = @assignment.title
+    %span Stamp
+  %ul#tabList2.clearfix
+    %li#tabStamp2
+      = link_to 'Stamp', assignment_path(@assignment), class: 'link1'
+    %li#tabTutorial2 Tutorial
+  #js-tutorialArea
+    .tutorialAreaEnd
+      %h3
+        = image_tag "num_#{@tutorial.id}.gif"
+        = @tutorial.title
+  .tutorialComment
+    %p そもそもデザインとは何か。設計なのか意匠なのか芸術なのか。この後のチュートリアルのために、いくつかの資料を読んでおこう。
+    %ul
+      %li
+        %a.link1{:href => "#"} デザイン - Wikipedia
+      %li
+        %a.link1{:href => "#"} 原研哉さんが語る「本当に伝わるデザイン」
+    %p#tutorialBackButton
+      %a.link1{:href => "./"} Back
+
+  %div
+    = image_tag 'part_9.gif'
+= render 'footer2'

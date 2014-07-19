@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tutorials/show'
+
   root to: 'welcome#index'
 
   get '/auth/:provider/callback' => 'sessions#create'
@@ -8,6 +10,7 @@ Rails.application.routes.draw do
     resources :assignments, only: %i(show), controller: :user_assignments
   end
   resources :assignments, only: %i(index show) do
+    resources :tutorials, only: :show
     resources :stamps, only: %i(create destroy)
   end
 end

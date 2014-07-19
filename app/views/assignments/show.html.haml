@@ -37,10 +37,9 @@
     - @tutorials.each do |tutorial|
       %div{class: tutorial.number == @tutorials.last ? 'tutorialAreaEnd' : 'tutorialArea' }
         %h3
-          %a.link1{:href => "#"}
+          = link_to assignment_tutorial_path(@assignment, tutorial), class: 'link1' do
             = image_tag "num_#{tutorial.number}.gif"
             = tutorial.title
-
   %div
     = image_tag 'part_9.gif'
 = render 'footer2'
