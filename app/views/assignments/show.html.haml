@@ -1,0 +1,26 @@
+= link_to '課題一覧', assignments_path
+
+%h1= @assignment.title
+%p= @assignment.description
+
+- if logged_in?
+  - @tutorials.each do |tutorial|
+    %ul
+      %li
+        = tutorial.number
+        - if tutorial.stamped_by?(current_user)
+          %span.js-unstamp
+            = link_to 'ハンコ済み', assignment_stamp_path(assignment_id: @assignment, stamp_id: tutorial.stamps.where(user: current_user).first.id), remote: true, method: :delete
+        - else
+          %span.js-stamp
+            = link_to 'ハンコを押す', assignment_stamps_path(assignment_id: @assignment.id, tutorial_id: tutorial.id), remote: true, method: :post
+  - @tutorials.each do |tutorial|
+    %ul
+      %li
+        = tutorial.title
+
+- else
+  %ul
+    - @tutorials.each do |tutorial|
+      %li
+        = tutorial.title

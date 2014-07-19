@@ -1,2 +1,5 @@
-%h1 Assignments#index
-%p Find me in app/views/assignments/index.html.haml
+%h1 課題一覧
+%ul
+  - @assignments.each do |assignment|
+    %li
+      = link_to assignment.title, assignment
