@@ -5,6 +5,6 @@ class AssignmentsController < ApplicationController
 
   def show
     @assignment = Assignment.find(params[:id])
-    @tutorials = @assignment.tutorials.includes(:stamps)
+    @tutorials = @assignment.tutorials.order(:number).includes(:stamps)
   end
 end
