@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'tutorials/show'
-
   root to: 'welcome#index'
 
   get '/auth/:provider/callback' => 'sessions#create'
